@@ -16,8 +16,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, references|
-|group_id|integer|null: false, references|
+|user_id|references|null: false|
+|group_id|references|null: false|
 
 ### Association
 - belongs_to :user
@@ -40,8 +40,8 @@
 |------|----|-------|
 |body|text|
 |image|string|
-|user_id|integer|null: false, references|
-|group_id|integer|null: false, references|
+|user_id|references|null: false|
+|group_id|references|null: false|
 
 ### Association
 - belongs_to :user
