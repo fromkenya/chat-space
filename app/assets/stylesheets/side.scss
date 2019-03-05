@@ -1,0 +1,43 @@
+.side-chat {
+  float: left;
+  width: 300px;
+  color: white;
+  .side-upper {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 20px;
+    background-color: #253141;
+    height: 100px;
+    .side-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      ul {
+        display: flex;
+        a {
+          color: white;
+        }
+        li {
+          padding-left: 5px
+        }
+      }
+    }
+  }
+  .groups {
+    padding: 20px 20px 0;
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    .group {
+      padding-bottom: 40px;
+      p {
+        padding-bottom: 5px;
+        font-size: 15px;
+      }
+      p:nth-of-type(2) {
+        font-size: 11px;
+      }
+    }
+  }
+}
