@@ -6,5 +6,57 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
   %body
+    .notice
+      グループを作成しました
+
+    .chat-main
+      .main-header
+        .left-box
+          .current-group
+            %h2 group
+          %ul.member-list
+            Member :
+            %li.member
+              sample
+        = link_to "#" do
+          .edit-btn Edit
+      .main-chat
+        %ul.messages
+          %li.message
+            .message-upper
+              %p group
+              %p 2019/03/03(Sun) 14:55:46
+            %p message
+          %li.message
+            .message-upper
+              %p group
+              %p 2019/03/03(Sun) 14:55:46
+            %p message
+      .form
+        %form
+          .input-box
+            %input.text-area{placeholder: "type a message", }
+              %label.upload-label{for: "upload-icon"}
+                %i.fa.fa-picture-o
+                %input.image-file{id: "upload-icon", type: "file"}
+          %input.submit-btn{type: "submit", value: "Send"}
+
+    .side-chat
+      .side-upper
+        .side-header
+          %p sample
+          %ul
+            %li
+              = link_to "#" do
+                %i.fa.fa-edit
+            %li
+              = link_to "#" do
+                %i.fa.fa-cog
+      .groups
+        .group
+          %p sample
+          %p sample
+
     = yield
