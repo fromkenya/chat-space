@@ -1,11 +1,11 @@
-@import "./reset";
-@import "./main";
-@import "./side";
-@import "./form";
-@import "./common";
 @import "font-awesome";
 @import "config/colors";
+@import "modules/reset";
+@import "modules/main";
+@import "modules/side";
+@import "modules/form";
+@import "modules/common";
 @import "modules/flash";
 @import "modules/group";
-@import "./user";
+@import "modules/user";
 
