@@ -5,8 +5,9 @@
         %h2 group
       %ul.member-list
         Member :
+        / - @group.users.each do |user|
         %li.member
-          sample
+          / = user.name
     = link_to "#" do
       .edit-btn Edit
   .main-chat
@@ -42,6 +43,10 @@
           = link_to edit_user_path(current_user) do
             %i.fa.fa-cog
   .groups
-    .group
-      %p sample
-      %p sample
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          %p
+            = group.name
+          %p
+            メッセージはまだありません。
