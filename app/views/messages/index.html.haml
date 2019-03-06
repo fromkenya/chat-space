@@ -32,13 +32,14 @@
 .side-chat
   .side-upper
     .side-header
-      %p sample
+      %p
+        = current_user.name
       %ul
         %li
           = link_to "#" do
             %i.fa.fa-edit
         %li
-          = link_to "#" do
+          = link_to edit_user_path(current_user) do
             %i.fa.fa-cog
   .groups
     .group
