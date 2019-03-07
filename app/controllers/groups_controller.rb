@@ -1,10 +1,6 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update]
 
-  # def index
-  #   @group = Group.find(current_user.id)
-  # end
-
   def update
     if @group.update(group_params)
       redirect_to root_path, notice: 'グループを編集しました'
@@ -20,7 +16,6 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-    # byebug
     if @group.save
       redirect_to root_path, notice: 'グループを作成しました'
     else
